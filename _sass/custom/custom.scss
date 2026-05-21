@@ -4,7 +4,6 @@
 // Just the Class styles
 @import 'announcement';
 @import 'module';
-@import 'schedule';
 @import 'staffer';
 
 // Overrides
@@ -28,7 +27,41 @@ summary {
   width: 100%;
 }
 
+.site-title,
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+  color: #2e2d29;
+}
+
+.side-bar,
+.main-header {
+  background-color: #f8f6ea;
+}
+
+.site-header,
+.main-header,
+.side-bar {
+  border-color: #eee6cb;
+}
+
+.label-release {
+  background-color: #d2c295;
+  color: #2e2d29;
+}
+
+.label-due {
+  background-color: #8c1515;
+}
+
 .main-content {
+  table {
+    width: 100%;
+  }
+
   dl {
     display: block;
     grid-template-columns: none;
@@ -47,5 +80,40 @@ summary {
     + dt {
       margin-top: 1em;
     }
+  }
+}
+
+.content-list {
+  display: grid;
+  gap: $sp-3;
+  margin: $sp-4 0;
+}
+
+.content-list-item {
+  border: $border $border-color;
+  border-radius: $border-radius;
+  padding: $sp-3;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.content-links {
+  border: $border $border-color;
+  border-radius: $border-radius;
+  margin-top: $sp-6;
+  padding: $sp-3;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  ul {
+    margin-bottom: 0;
   }
 }

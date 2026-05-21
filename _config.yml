@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Class
-tagline: A Jekyll template for course websites
-description: A modern, highly customizable, responsive Jekyll template for course websites
-author: Kevin Lin
-baseurl: '/just-the-class' # the subpath of your site, e.g. /blog
-url: 'https://kevinl.info' # the base hostname & protocol for your site, e.g. http://example.com
+title: Course Website
+tagline: Course materials and calendar
+description: Course materials, lectures, assignments, tutorials, staff, and resources.
+author: Course Staff
+baseurl: '/ai-course' # the subpath of your site, e.g. /blog
+url: 'https://taws-espol.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -30,22 +30,25 @@ exclude:
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.12.0
-color_scheme: light
+color_scheme: stanford
 search_enabled: true
 heading_anchors: true
 permalink: pretty
-aux_links:
-  Kevin Lin:
-    - 'https://kevinl.info'
-  Just the Class on GitHub:
-    - 'https://github.com/kevinlin1/just-the-class'
+aux_links: {}
 footer_content:
 
 # Collections for website data
 collections:
   staffers:
-  modules:
-  schedules:
+  lectures:
+    output: true
+    permalink: /lectures/:path/
+  assignments:
+    output: true
+    permalink: /assignments/:path/
+  tutorials:
+    output: true
+    permalink: /tutorials/:path/
   announcements:
 # Default layouts for each collection type
 defaults:
@@ -59,14 +62,22 @@ defaults:
       width: 300
   - scope:
       path: ''
-      type: modules
+      type: lectures
     values:
-      layout: module
+      layout: lecture
+      parent: Lectures
   - scope:
       path: ''
-      type: schedules
+      type: assignments
     values:
-      layout: schedule
+      layout: assignment
+      parent: Assignments
+  - scope:
+      path: ''
+      type: tutorials
+    values:
+      layout: tutorial
+      parent: Tutorials
   - scope:
       path: ''
       type: announcements

@@ -1,22 +1,19 @@
 ---
 layout: home
-title: Course Website
+title: AI Course
 nav_exclude: true
 permalink: /:path/
 seo:
   type: Course
-  name: Course Website
+  name: Artificial Intelligence Course
 ---
 
-# Course Website
+# Welcome!
 
-This site is a small Jekyll course website. Edit the collection files to add course content:
+Welcome to the Artificial Intelligence course specially designed for Taws Members on the Research Track.
 
-- calendar entries in [calendar.md](calendar.md)
-- lecture pages in `_lectures`
-- assignment pages in `_assignments`
-- tutorial pages in `_tutorials`
-- staff profiles in `_staffers`
-- other links in [resources.md](resources.md)
-
-Run locally with `bundle exec jekyll serve`.
+- You'll learn the basics of Machine Learning and Neural Networks.
+- The course is completely asynchronous.
+- You have a lecture and homework for each topic.
+- You may ask questions on the [forum](https://github.com/Taws-Espol/ai-course/discussions)
+- Something else? contact the [staff]({{ "/staff/" | relative_url }})

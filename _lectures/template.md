@@ -1,6 +1,6 @@
 ---
 title: Development Workflow
-nav_order: 2
+nav_order: 100
 parent: Lectures
 subtopics:
   - Version control basics
